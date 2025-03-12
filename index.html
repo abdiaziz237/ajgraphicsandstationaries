@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .hero-section {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #f8f9fa;
+        }
+        .hero-section img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+        
+    </style>
+</head
+<body>
+   <!-- Navigation Bar -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">My Website</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#mission">Mission</a></li>
+                <li class="nav-item"><a class="nav-link" href="#vision">Vision</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Bootstrap JS (for toggle functionality) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  let navLinks = document.querySelectorAll(".nav-link");
+  let navbarCollapse = document.querySelector(".navbar-collapse");
+  navLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+          if (window.innerWidth < 992) {
+              navbarCollapse.classList.remove("show");
+          }
+      });
+  });
+});
+</script>
+    <!-- hero section-->
+     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            height: 100vh;
+            background: url("my\,jpg/p.jpg")center/cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="display-4 fw-bold"><Fieldset>WELCOME TO AJ GRAPHICS AND STATIONARY </Fieldset></h1>
+            <p class="lead">Discover amazing experiences with us</p>
+            <a href="#" class="btn btn-primary btn-lg">GALLERY </a>
+        </div>
+    </section>
+
+  
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+        <style>
+            /* Portfolio Card Styling */
+            .portfolio-card {
+                position: relative;
+                overflow: hidden;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                cursor: pointer;
+            }
+    
+            .portfolio-img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                transition: transform 0.3s ease-in-out;
+            }
+    
+            /* Hover Effect */
+            .portfolio-card:hover .portfolio-img {
+                transform: scale(1.1);
+            }
+    
+            /* Overlay Effect */
+            .overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.7);
+                color: white;
+                padding: 20px;
+                text-align: center;
+                transform: translateY(100%);
+                transition: transform 0.3s ease-in-out;
+            }
+    
+            .portfolio-card:hover .overlay {
+                transform: translateY(0);
+            }
+        </style>
+    
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5 bg-light">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">My Portfolio</h2>
+                <p class="text-muted">Explore my latest design works</p>
+            </div>
+    
+            <!-- Filter Buttons -->
+            <div class="text-center mb-4">
+                <button class="btn btn-outline-dark active" data-filter="all">All</button>
+                <button class="btn btn-outline-dark" data-filter="logos">Logos</button>
+                <button class="btn btn-outline-dark" data-filter="branding">Branding</button>
+                <button class="btn btn-outline-dark" data-filter="illustration">Illustration</button>
+            </div>
+    
+            <!-- Portfolio Grid (3x2 Layout) -->
+            <div class="row g-4">
+                <!-- Portfolio Item 1 -->
+                <div class="col-md-4 portfolio-item" data-category="logos">
+                    <div class="portfolio-card">
+                        <img src="my,jpg/yow,jpg.jpg" class="portfolio-img" alt="Logo Design" onclick="openModal('images/bal.jpeg')">
+                      
+                        <div class="overlay">
+                            <h5>Logo Design</h5>
+                            <p>Brand Identity</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Portfolio Item 2 -->
+                <div class="col-md-4 portfolio-item" data-category="branding">
+                    <div class="portfolio-card">
+                        <img src="my,jpg/WhatsApp Image 2025-03-07 at 23.44.57_d6fe1769.jpg" class="portfolio-img" alt="Branding" onclick="openModal('images/ball.jpeg')">
+                        <div class="overlay">
+                            <h5>Branding</h5>
+                            <p>Visual Communication</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Portfolio Item 3 -->
+                <div class="col-md-4 portfolio-item" data-category="illustration">
+                    <div class="portfolio-card">
+                        <img src="my,jpg/WhatsApp Image 2025-03-07 at 23.44.58_04db8591.jpg" class="portfolio-img" alt="Illustration" onclick="openModal('images/coming.jpeg')">
+                        <div class="overlay">
+                            <h5>Illustration</h5>
+                            <p>Custom Artwork</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Portfolio Item 4 -->
+                <div class="col-md-4 portfolio-item" data-category="logos">
+                    <div class="portfolio-card">
+                        <img src="my,jpg/WhatsApp Image 2025-03-07 at 18.39.44_14aaae97.jpg" class="portfolio-img" alt="Creative Logo" onclick="openModal('images/image1.jpeg')">
+                        <div class="overlay">
+                            <h5>Creative Logo</h5>
+                            <p>Business Identity</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Portfolio Item 5 -->
+                <div class="col-md-4 portfolio-item" data-category="branding">
+                    <div class="portfolio-card">
+                        <img src="my,jpg/WhatsApp Image 2025-03-07 at 23.44.57_3c969745.jpg" class="portfolio-img" alt="Rebranding" onclick="openModal('images/shared.jpeg')">
+                        <div class="overlay">
+                            <h5>Rebranding</h5>
+                            <p>Modern Redesign</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Portfolio Item 6 -->
+                <div class="col-md-4 portfolio-item" data-category="illustration">
+                    <div class="portfolio-card">
+                        <img src="my,jpg/WhatsApp Image 2025-03-07 at 18.39.45_66d9450f.jpg" class="portfolio-img" alt="Artistic Work" onclick="openModal('images/were.jpeg')">
+                        <div class="overlay">
+                            <h5>Artistic Work</h5>
+                            <p>Digital Art</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Full-Screen Image Modal -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="fullImage">
+</div>
+<style>/* Fullscreen Image Modal */
+  .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .modal-content {
+      max-width: 70%;
+      max-height: 80%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  }
+  
+  .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+  }
+  
+  .close:hover {
+      color: red;
+  }</style>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+    const portfolioImages = document.querySelectorAll(".portfolio-img");
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("fullImage");
+    const closeBtn = document.querySelector(".close");
+
+    portfolioImages.forEach(img => {
+        img.addEventListener("click", function () {
+            modal.style.display = "flex"; // Show modal
+            modalImg.src = this.src; // Set clicked image as modal image
+        });
+    });
+
+    // Close modal when clicking the close button
+    closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});</script>
+    <!-- Bootstrap Modal for Image Preview -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Image Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" class="img-fluid" alt="Expanded Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript to Handle Image Modal -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll("[data-filter]");
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const category = this.getAttribute("data-filter");
+
+        // Remove active class from all buttons
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        this.classList.add("active");
+
+        // Show or hide portfolio items
+        portfolioItems.forEach((item) => {
+          if (category === "all" || item.getAttribute("data-category") === category) {
+            item.style.display = "block";
+            setTimeout(() => item.style.opacity = "1", 100); // Fade-in effect
+          } else {
+            item.style.opacity = "0";
+            setTimeout(() => item.style.display = "none", 300); // Fade-out effect
+          }
+        });
+      });
+    });
+  });
+    </script>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!--ABOUT-->
+    <section id="about">
+        <h2>About</h2>
+        <p>AJ Graphic and Stationery Company is a dynamic entity offering a
+            comprehensive suite of world-class stationery and graphic services.
+            Established in Bardera in 2017, our rapid expansion has established
+            us as a trusted partner, serving clients in four districts of the Gedo
+            region of Somalia. Our commitment to excellence, innovation and
+            unwavering dedication has cemented our reputation as an industry
+            leader.</p>
+    </section>
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Contact Us</h2>
+        <p class="text-center lead">Have any questions? Reach out to us!</p>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <h5>Our Address</h5>
+                <p>sakow-road,Bardera,Jubaland</p> 
+                 </p>Along Custom road,Belethawa,Jubaland</p>  
+                </p>Farjano,Kismayo,Jubaland</p>
+                <h5>Email</h5>
+                <p>ajgraphics.stationary@gmail.com</p>
+                <h5>Phone</h5>
+                <p>+25613712105</p>
+            </div>
+
+            <div class="col-lg-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" class="form-control" rows="4" placeholder="Your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Mission Section -->
+<section id="mission" class="bg-light py-5 text-center">
+    <div class="container">
+        <h2>Our Mission</h2>
+        <p class="lead">
+            Our mission is to provide innovative and reliable solutions that improve lives and create lasting value.
+            We strive for excellence in everything we do, with a commitment to integrity, quality, and sustainability.
+        </p>
+    </div>
+</section>
+<!-- Vision Section -->
+<section id="vision" class="bg-light py-5 text-center">
+    <div class="container">
+        <h2>Our Vision</h2>
+        <p class="lead">
+            Our vision is to be a global leader in innovation, delivering high-quality solutions that make a 
+            meaningful impact in the world. We aim to continuously evolve and set new industry standards.
+        </p>
+    </div>
+</section>
+<!--footer section-->
+<footer class="bg-dark text-light py-4">
+    <div class="container">
+        <div class="row">
+            <!-- Company Info -->
+            <div class="col-md-4 text-center text-md-start">
+                <h5>AJ GRAPHICS</h5>
+                <p class="text-muted">Innovating the future with cutting-edge technology solutions.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-4 text-center">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">About</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Services</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+<!-- Social Media -->
+<div class="col-md-4 text-center text-md-end">
+    <h5>Follow Us</h5>
+    <a href="#" class="text-light me-2"><i class="bi bi-facebook fs-4"></i></a>
+    <a href="#" class="text-light me-2"><i class="bi bi-twitter fs-4"></i></a>
+    <a href="#" class="text-light me-2"><i class="bi bi-instagram fs-4"></i></a>
+    <a href="#" class="text-light"><i class="bi bi-linkedin fs-4"></i></a>
+</div>
+</div>
+
+<!-- Copyright -->
+<div class="text-center mt-3">
+<p class="mb-0 text-muted">&copy; 2024 AJ GRAPHICS. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+</body>
+
+</html
